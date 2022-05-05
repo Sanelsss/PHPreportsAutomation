@@ -1,0 +1,187 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-05-05T20:20:18.182Z",
+    "end": "2022-05-05T20:20:48.193Z",
+    "duration": 30011,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8c945177-bb0f-44e8-9e06-bf756f1debdc",
+      "title": "",
+      "fullFile": "cypress/integration/FlightsPage.js",
+      "file": "cypress/integration/FlightsPage.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "63649d3f-82c3-4faa-a72e-4bf857bcfbb0",
+          "title": "Hotels page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "9411ad7a-0eaf-494f-9dcd-c329eb4516d9",
+              "title": "Search for a specific flight",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "PHP-107 - Searching for a unavailable flight",
+                  "fullTitle": "Hotels page Search for a specific flight PHP-107 - Searching for a unavailable flight",
+                  "timedOut": null,
+                  "duration": 11293,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Making sure all login page elements are visible\ncy.get(\"#autocomplete\").type(\"Doha\", {\n  force: true\n});\ncy.get(\"#onereturn > div.col-md-6 > div > div:nth-child(1) > div > div > div > div > div:nth-child(1) > div.autocomplete-location\").click({\n  force: true\n});\ncy.get(\"#autocomplete2\").type(\"Sienna\", {\n  force: true\n});\ncy.get(\"#onereturn > div.col-md-6 > div > div:nth-child(2) > div > div.form-group > div > div > div:nth-child(1) > div:nth-child(1) > strong\").click({\n  force: true\n});\ncy.get(\"#flights-search\").click({\n  force: true\n});\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\"\n}, \"./actions/login/FlightsPage1/1\");",
+                  "err": {
+                    "message": "Error: The following error originated from your application code, not from Cypress.\n\n  > [MixItUp] An invalid selector or element reference was passed to the mixitup factory function\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                    "estack": "Error: The following error originated from your application code, not from Cypress.\n\n  > [MixItUp] An invalid selector or element reference was passed to the mixitup factory function\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at e (https://phptravels.net/app/themes/default/assets/js/mixitup.min.js:16:2921)\n    at https://phptravels.net/flights/en/usd/doh/say/oneway/economy/08-05-2022/1/0/0:683:17",
+                    "diff": null
+                  },
+                  "uuid": "3e6c4a22-142c-48b5-a0bc-32bfef0e6928",
+                  "parentUUID": "9411ad7a-0eaf-494f-9dcd-c329eb4516d9",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "PHP-106 - UI checkout",
+                  "fullTitle": "Hotels page Search for a specific flight PHP-106 - UI checkout",
+                  "timedOut": null,
+                  "duration": 10872,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"#new-york > div > div:nth-child(2) > a > div > div > div.col-7 > h6\").click({\n  force: true\n});\ncy.get(\"#flights_1\").click({\n  force: true\n});\ncy.get(\"#data > ul > li:nth-child(1) > div > form > div > div.col-md-10 > div.theme-search-results-item-preview > div.theme-search-results-item-mask-link\").click({\n  force: true\n});\ncy.get(\"#searchResultsItem-0 > div > div.theme-search-results-item-extend-inner > div > div > div > div.col-md-9 > div > ul > li > div.row > div.col-6.flight_desc > p:nth-child(1)\").click({\n  force: true\n});\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\"\n}, \"./actions/login/FlightsPage2/2\");",
+                  "err": {},
+                  "uuid": "6fa36db0-1a37-4712-b33d-8484d43f60a4",
+                  "parentUUID": "9411ad7a-0eaf-494f-9dcd-c329eb4516d9",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6fa36db0-1a37-4712-b33d-8484d43f60a4"
+              ],
+              "failures": [
+                "3e6c4a22-142c-48b5-a0bc-32bfef0e6928"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 22165,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d3df4103-e88b-48a9-8d2a-d4a8c20dbd45",
+              "title": "Check some additional info",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "PHP-107 - Sign Up to a page",
+                  "fullTitle": "Hotels page Check some additional info PHP-107 - Sign Up to a page",
+                  "timedOut": null,
+                  "duration": 4128,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"@searchButton\").should(\"be.visible\").click({\n  force: true\n});\ncy.get(\"@banner\").children().should(\"have.length\", 9);\ncy.get(\"@banner\").eq(0).children().should(\"contain\", \"Home\");\ncy.get(\"@banner\").eq(3).children().should(\"contain\", \"Tours\");\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\",\n  path: \"/Sanel/Desktop/FlightsPage.js/screenshots/Flight.png\"\n}\n/*  \"./actions/login/FlightsPage3/3\" */\n);",
+                  "err": {},
+                  "uuid": "6b08de2f-f0ca-4b1c-8bb0-6441c7e574fb",
+                  "parentUUID": "d3df4103-e88b-48a9-8d2a-d4a8c20dbd45",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6b08de2f-f0ca-4b1c-8bb0-6441c7e574fb"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 4128,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": "false",
+        "html": "false",
+        "json": "true"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
