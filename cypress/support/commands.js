@@ -1,18 +1,16 @@
 //Setting up aliases
 Cypress.Commands.add("loginPage", (user, password) => {
-  // cy.visit("https://phptravels.net/login");
-  //cy.get('[href="/login"]').as("login").click();
-  //cy.get('input[name="email"]').as("emailInput").type(user);
   cy.get("@emailInput").type(user, { force: true });
-  cy.get("@passwordInput").type(password, { force: true });
+  cy.get("@passwordInput").type(password, {
+    force: true,
+    log: false,
+  });
   cy.get("@loginSubmit").scrollIntoView({ force: true });
   cy.get("header").scrollIntoView({ duration: 200 });
   cy.wait(1000);
   cy.get("@loginSubmit").click({ force: true });
   cy.wait(2000);
-  /* cy.get('[href="/account/register"]').as("registerAccount"); */
 });
-//Setting up aliases
 Cypress.Commands.add(
   "signupPage",
   (firstName, lastName, email, phone, password) => {
@@ -36,7 +34,7 @@ Cypress.Commands.add(
     cy.get('input[name="password"]')
       .should("be.visible")
       .clear({ force: true })
-      .type(password, { force: true });
+      .type(password, { force: true, log: false });
     cy.log("waiting in commands");
     cy.wait(2000);
     cy.get(
@@ -54,32 +52,9 @@ Cypress.Commands.add("loginInfo", () => {
   cy.get(
     "#fadein > div.container > div > div.modal-content.col.align-self-center > div.modal-body > div > form > div:nth-child(2) > div.form-group.mb-2 > input"
   ).as("passwordInput");
-  //cy.get('[href="/account/forgot"]').as("forgotPassword");
   cy.get("#rememberchb").as("remember");
   cy.get(
     "#fadein > div.container > div > div.modal-content.col.align-self-center > div.modal-body > div > form > div.btn-box.pt-3.pb-4 > button"
   ).as("loginSubmit");
   cy.get('label[for="rememberchb"]').as("forgotPassword");
-  /*  cy.get(
-    "#fadein > div.container > div > div.modal-content.col.align-self-center > div.modal-body > div > form > div.form-group.mt-3 > button > span.ladda-label"
-  ).as("signUpButton"); */
 });
-
-/* Cypress.Commands.add("hotelSearch", () => {
-  cy.visit("https://phptravels.net/hotels");
-  cy.get("#cookie_stop").click({ force: true });
-  cy.wait(2000);
-
-  cy.get("#select2-hotels_city-container")
-    .as("hotelContainer")
-    .click({ force: true });
-  cy.get(
-    "#fadein > span > span > span.select2-search.select2-search--dropdown > input"
-  ).as("container");
-  cy.get(
-    "#fadein > span > span > span.select2-search.select2-search--dropdown > input"
-  ).as("istanbul");
-
-
-});
- */
