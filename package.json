@@ -2,7 +2,7 @@
   "name": "phptravels",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/Sanelsss/PHP.git",
+  "homepage": "https://github.com/Sanelsss/PHPreports.git",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
