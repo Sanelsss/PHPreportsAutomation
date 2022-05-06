@@ -1,0 +1,473 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 10,
+    "passes": 10,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-06T21:18:24.443Z",
+    "end": "2022-05-06T21:22:05.790Z",
+    "duration": 119291,
+    "testsRegistered": 10,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "97e66d22-f8bf-4ce7-a7f3-dc903e93be80",
+      "title": "",
+      "fullFile": "cypress/integration/HotelsPage.spec.js",
+      "file": "cypress/integration/HotelsPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "343aa487-930e-42d2-a433-dc327ef3f51f",
+          "title": "Hotels page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "e766e600-6661-44f5-b00c-b8ef70832c65",
+              "title": "Search for a specific hotel",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "PHP-104 - Searching for a hotel",
+                  "fullTitle": "Hotels page Search for a specific hotel PHP-104 - Searching for a hotel",
+                  "timedOut": null,
+                  "duration": 11754,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('input[ role=\"searchbox\"]').type(\"Ist\", {\n  force: true\n});\ncy.get(\"#select2-hotels_city-results > li.select2-results__option.select2-results__option--highlighted\").should(\"be.visible\").click({\n  force: true\n});\ncy.get(\"@checkin\").should(\"be.visible\").click({\n  force: true\n});\ncy.get('input[name=\"checkout\"]').should(\"be.visible\").click({\n  force: true\n});\ncy.get(\"#fadein > div:nth-child(22) > div.datepicker-days > table > tbody > tr:nth-child(3) > td:nth-child(3)\").click({\n  force: true\n});\ncy.get(\"@searchButton\").should(\"be.visible\").click({\n  force: true\n});\ncy.clearCookies();\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\",\n  path: \"/Sanel/Desktop/FlightsPage.js/screenshots/Hotel1.png\"\n});",
+                  "err": {},
+                  "uuid": "a09d45e5-0d9c-4302-8238-1faab4de71a4",
+                  "parentUUID": "e766e600-6661-44f5-b00c-b8ef70832c65",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "PHP-106 - DOM checkout and hotels main page checkout",
+                  "fullTitle": "Hotels page Search for a specific hotel PHP-106 - DOM checkout and hotels main page checkout",
+                  "timedOut": null,
+                  "duration": 5569,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.url().should(\"be.equal\", \"https://phptravels.net/hotels\");\ncy.get(\"@dots\").children().should(\"have.length\", 3);\ncy.get(\"@dots\").eq(1).click({\n  force: true\n});\ncy.get(\"@dots\").eq(2).click({\n  force: true\n});\ncy.get(\"#cookie_stop\").click({\n  force: true\n});\ncy.get(\"@someHotel\").scrollIntoView({\n  duration: 200\n});\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\",\n  path: \"/Sanel/Desktop/FlightsPage.js/screenshots/Hotel2.png\"\n});",
+                  "err": {},
+                  "uuid": "4c91614f-7f71-4f8e-b021-fa9cd45440f5",
+                  "parentUUID": "e766e600-6661-44f5-b00c-b8ef70832c65",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a09d45e5-0d9c-4302-8238-1faab4de71a4",
+                "4c91614f-7f71-4f8e-b021-fa9cd45440f5"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 17323,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "0e95b345-14de-48fe-b443-5816e542def7",
+              "title": "Check some additional info",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "PHP-107 - Selecting a specific hotel and guest info input",
+                  "fullTitle": "Hotels page Check some additional info PHP-107 - Selecting a specific hotel and guest info input",
+                  "timedOut": null,
+                  "duration": 12604,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"#fadein > section.hotel-area.section-bg.section-padding.overflow-hidden.padding-right-100px.padding-left-100px > div > div.row.padding-top-50px > div > div > div > div.owl-stage-outer > div > div:nth-child(7) > div > div.card-img > a > img\").should(\"be.visible\").click({\n  force: true\n});\ncy.get(\"#availability > div.single-content-item.padding-top-40px.padding-bottom-30px.rooms > div:nth-child(1) > div.card-body > div > div.col-md-9 > form > div > div.col-md-3.booked_44 > div > div > button > span.ladda-label \").should(\"be.visible\").click({\n  force: true\n});\ncy.get('input[name=\"firstname\"]').should(\"be.visible\").type(\"a\", {\n  force: true\n});\ncy.get('input[name=\"lastname\"]').should(\"be.visible\").type(\"a\", {\n  force: true\n});\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\",\n  path: \"/Sanel/Desktop/FlightsPage.js/screenshots/Hotel3.png\"\n});",
+                  "err": {},
+                  "uuid": "795907e6-b800-482e-b384-e8c32a08fb35",
+                  "parentUUID": "0e95b345-14de-48fe-b443-5816e542def7",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "795907e6-b800-482e-b384-e8c32a08fb35"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 12604,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "004e14c0-35ed-43c6-bea1-c5fc41e97566",
+      "title": "",
+      "fullFile": "cypress/integration/LoginTest.spec.js",
+      "file": "cypress/integration/LoginTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9974c3f9-c06a-4265-bf4f-eb277b511db8",
+          "title": "login page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "57b33f7f-af0d-40b8-9d1a-687d097e3d3b",
+              "title": "Login validation fields",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "PHP-101 - Navigate to the login page and make sure all required elements are visible",
+                  "fullTitle": "login page Login validation fields PHP-101 - Navigate to the login page and make sure all required elements are visible",
+                  "timedOut": null,
+                  "duration": 5992,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Making sure all login page elements are visible\ncy.get(\"#cookie_stop\").click();\ncy.get(\"@emailInput\").should(\"be.visible\").type(\"A\", {\n  force: true\n});\ncy.get(\"@passwordInput\").should(\"be.visible\").type(\"A\", {\n  force: true\n});\ncy.url().should(\"contain\", \"/login\");\ncy.get(\"@remember\").should(\"exist\");\ncy.get(\".font-size-14\").should(\"contain\", \"Please enter your account credentials below\");\ncy.get(\"@forgotPassword\").should(\"be.visible\");\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\",\n  path: \"/Sanel/Desktop/FlightsPage.js/screenshots/Login1.png\"\n});",
+                  "err": {},
+                  "uuid": "e0c2bbf8-c947-4898-bb85-3bc5577c8b9f",
+                  "parentUUID": "57b33f7f-af0d-40b8-9d1a-687d097e3d3b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "e0c2bbf8-c947-4898-bb85-3bc5577c8b9f"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5992,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "58ede5d1-8701-4d19-8359-6b390e0af327",
+              "title": "Login options",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "PHP-102 - Login with valid username and password",
+                  "fullTitle": "login page Login options PHP-102 - Login with valid username and password",
+                  "timedOut": null,
+                  "duration": 13226,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.loginPage(user, password);\ncy.get(\"#cookie_stop\").click();\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\",\n  path: \"/Sanel/Desktop/FlightsPage.js/screenshots/Login2.png\"\n});",
+                  "err": {},
+                  "uuid": "bc562e6d-7a2c-4c2a-9d8e-25202a07b68d",
+                  "parentUUID": "58ede5d1-8701-4d19-8359-6b390e0af327",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "PHP-103 - Log in  to a page",
+                  "fullTitle": "login page Login options PHP-103 - Log in  to a page",
+                  "timedOut": null,
+                  "duration": 27881,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.loginPage(user, password);\ncy.get(\"#cookie_stop\").click();\ncy.get(\"#fadein > div.container > div > div.modal-content.col.align-self-center > div.modal-body > div > form > div.btn-box.pt-3.pb-4 > div > div > a > span.ladda-label\").click({\n  force: true\n});\ncy.signupPage(firstName, lastName, email, phone, password);\ncy.wait(1000);\ncy.screenshot({\n  capture: \"runner\",\n  overwrite: true,\n  path: \"/Sanel/Desktop/FlightsPage.js/screenshots/Login4.png\"\n});",
+                  "err": {},
+                  "uuid": "ce55f977-07fa-4111-a25d-0e1b7689b7d1",
+                  "parentUUID": "58ede5d1-8701-4d19-8359-6b390e0af327",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "PHP-103 - Sign Up to a page",
+                  "fullTitle": "login page Login options PHP-103 - Sign Up to a page",
+                  "timedOut": null,
+                  "duration": 13702,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.wait(2000);\ncy.get(\"@emailInput\").clear({\n  force: true\n});\ncy.get(\"@passwordInput\").clear({\n  force: true\n});\ncy.wait(2000);\ncy.get(\"@emailInput\").type(email, {\n  force: true\n});\ncy.get(\"@passwordInput\").type(password, {\n  force: true,\n  log: false\n});\ncy.clearCookies();\ncy.wait(2000);\ncy.clearCookies();\ncy.get(\"@loginSubmit\").click({\n  force: true\n});\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\",\n  path: \"/Sanel/Desktop/FlightsPage.js/screenshots/Login3.png\"\n});",
+                  "err": {},
+                  "uuid": "6fe1b2b0-cc18-452c-99c8-9dbad68fcb99",
+                  "parentUUID": "58ede5d1-8701-4d19-8359-6b390e0af327",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "bc562e6d-7a2c-4c2a-9d8e-25202a07b68d",
+                "ce55f977-07fa-4111-a25d-0e1b7689b7d1",
+                "6fe1b2b0-cc18-452c-99c8-9dbad68fcb99"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 54809,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "fe1046cb-88f5-459f-b615-fd3259b6da70",
+      "title": "",
+      "fullFile": "cypress/integration/FlightsPage.spec.js",
+      "file": "cypress/integration/FlightsPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6a78cd87-006b-40a0-a61c-7b3827720d63",
+          "title": "Hotels page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "a72a58b6-3f18-4c0b-9a0a-e747e2ec6412",
+              "title": "Search for a flight ",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "PHP-107 - Searching for a  flight",
+                  "fullTitle": "Hotels page Search for a flight  PHP-107 - Searching for a  flight",
+                  "timedOut": null,
+                  "duration": 14737,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Making sure all login page elements are visible\ncy.get(\"#autocomplete\").type(\"Doha\", {\n  force: true\n});\ncy.get(\"#onereturn > div.col-md-6 > div > div:nth-child(1) > div > div > div > div > div:nth-child(1) > div.autocomplete-location\").click({\n  force: true\n});\ncy.get(\"#autocomplete2\").type(\"Chicago\", {\n  force: true\n});\ncy.get(\"#onereturn > div.col-md-6 > div > div:nth-child(2) > div > div.form-group > div > div > div:nth-child(1) > div:nth-child(1) > strong\").click({\n  force: true\n});\ncy.get(\"#flights-search\").click({\n  force: true\n});\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\",\n  path: \"/Sanel/Desktop/FlightsPage.js/screenshots/Flight1.png\"\n});",
+                  "err": {},
+                  "uuid": "d332ddfe-3693-4139-adf3-c3c362d03bff",
+                  "parentUUID": "a72a58b6-3f18-4c0b-9a0a-e747e2ec6412",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "PHP-106 - Searching for a flight company/specific flight",
+                  "fullTitle": "Hotels page Search for a flight  PHP-106 - Searching for a flight company/specific flight",
+                  "timedOut": null,
+                  "duration": 10140,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"#new-york > div > div:nth-child(2) > a > div > div > div.col-7 > h6\").click({\n  force: true\n}); //Checking  LionAir\ncy.get(\"#flights_1\").check({\n  force: true\n});\ncy.get(\"#data > ul > li:nth-child(1) > div > form > div > div.col-md-10 > div.theme-search-results-item-preview > div.theme-search-results-item-mask-link\").click({\n  force: true\n});\ncy.get(\"#searchResultsItem-0 > div > div.theme-search-results-item-extend-inner > div > div > div > div.col-md-9 > div > ul > li > div.row > div.col-6.flight_desc > p:nth-child(1)\").click({\n  force: true\n});\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\",\n  path: \"/Sanel/Desktop/FlightsPage.js/screenshots/Flight2.png\"\n});",
+                  "err": {},
+                  "uuid": "f3535ec3-99f0-45d7-9816-34c4a198e945",
+                  "parentUUID": "a72a58b6-3f18-4c0b-9a0a-e747e2ec6412",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d332ddfe-3693-4139-adf3-c3c362d03bff",
+                "f3535ec3-99f0-45d7-9816-34c4a198e945"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 24877,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "a1d724c8-6961-4732-a6bd-108821d60358",
+              "title": "Checking DOM",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "PHP-107 - Checking banner DOM elements",
+                  "fullTitle": "Hotels page Checking DOM PHP-107 - Checking banner DOM elements",
+                  "timedOut": null,
+                  "duration": 3686,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get(\"@searchButton\").should(\"be.visible\").click({\n  force: true\n});\ncy.get(\"@banner\").children().should(\"have.length\", 9);\ncy.get(\"@banner\").eq(0).children().should(\"contain\", \"Home\");\ncy.get(\"@banner\").eq(3).children().should(\"contain\", \"Tours\");\ncy.screenshot({\n  overwrite: true,\n  capture: \"runner\",\n  path: \"/Sanel/Desktop/FlightsPage.js/screenshots/Flight3.png\"\n});",
+                  "err": {},
+                  "uuid": "8764ca3a-698a-403c-a5de-1f6563fa3b8b",
+                  "parentUUID": "a1d724c8-6961-4732-a6bd-108821d60358",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8764ca3a-698a-403c-a5de-1f6563fa3b8b"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3686,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

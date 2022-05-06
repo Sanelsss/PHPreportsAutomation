@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
 const user = "sanel_omanovic@hotmail.com";
-const email = "w@w";
+const email = "f@f";
 const password = "mostar2003";
-const firstName = "w";
-const lastName = "w";
-const phone = "+26";
+const firstName = "v";
+const lastName = "v";
+const phone = "+44";
 describe("login page", () => {
   beforeEach(() => {
     cy.clearCookies();
