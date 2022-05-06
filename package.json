@@ -2,7 +2,7 @@
   "name": "my-webpack-project",
   "version": "1.0.0",
   "description": "My webpack project",
-  "homepage": "https://github.com/Sanelsss/PHPreports.git",
+  "homepage": "https://github.com/Sanelsss/PHP.git",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
